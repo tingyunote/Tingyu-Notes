@@ -16,7 +16,7 @@
 [circleci-url]: https://travis-ci.com/ant-design/ant-design
 [github-action-image]: https://github.com/ant-design/ant-design/workflows/test/badge.svg
 [github-action-url]: https://github.com/ant-design/ant-design/actions?query=workflow%3Atest
-[codecov-image]: https://img.shields.io/codecov/c/github/ant-design/ant-design/master.svg?style=flat-square 
+[codecov-image]: https://img.shields.io/codecov/c/github/ant-design/ant-design/master.svg?style=flat-square
 [david-image]: https://img.shields.io/david/ant-design/ant-design?style=flat-square
 [david-dev-url]: https://david-dm.org/ant-design/ant-design?type=dev
 [david-dev-image]: https://img.shields.io/david/dev/ant-design/ant-design?style=flat-square
@@ -67,7 +67,7 @@
 
 ### 🌈 限流、降级、缓存
 
-- [**JAVA同一IP访问同一接口进行频率限制（分布式(京东抢购业务）及令牌桶实战使用场景**](<<https://github.com/RansongZ/github-test/blob/master/notes/JAVA%E5%90%8C%E4%B8%80IP%E8%AE%BF%E9%97%AE%E5%90%8C%E4%B8%80%E6%8E%A5%E5%8F%A3%E8%BF%9B%E8%A1%8C%E9%A2%91%E7%8E%87%E9%99%90%E5%88%B6%EF%BC%88%E5%88%86%E5%B8%83%E5%BC%8F(%E4%BA%AC%E4%B8%9C%E6%8A%A2%E8%B4%AD%E4%B8%9A%E5%8A%A1%EF%BC%89%E5%8F%8A%E4%BB%A4%E7%89%8C%E6%A1%B6%E5%AE%9E%E6%88%98%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF.md>>)
+- [**JAVA同一IP访问同一接口进行频率限制（分布式(京东抢购业务）及令牌桶实战使用场景**](<<http://ransongv587.com/>>)
 
 ### 🛡 消息中间件
 
@@ -76,12 +76,17 @@
 ## 🌍 多线程
 
 - [**我画了35张图就是为了让你深入 AQS**](https://mp.weixin.qq.com/s/2zDW1abkTUMKs6RuRyrPpw)
+- 深入理解线程池
 
 ## 🔗 JVM
 
 - [**线上JVM参数调优及选择合适垃圾收集器**](<https://github.com/RansongZ/github-test/blob/master/notes/%E7%BA%BF%E4%B8%8AJVM%E5%8F%82%E6%95%B0%E8%B0%83%E4%BC%98%E5%8F%8A%E9%80%89%E6%8B%A9%E5%90%88%E9%80%82%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8.md>)
 
   
+
+  
+
+
 
 
 
