@@ -67,7 +67,7 @@
 
 ### 🌈 限流、降级、缓存
 
-- [**JAVA同一IP访问同一接口进行频率限制（分布式(京东抢购业务）及令牌桶实战使用场景**](<http://ransongv587.com/>)
+- [**JAVA同一IP访问同一接口进行频率限制（分布式(京东抢购业务）及令牌桶实战使用场景**](https://mp.weixin.qq.com/s/pRNaiYlqrVAD8YzSN9_rSg)
 
 ### 🛡 消息中间件
 
@@ -80,7 +80,7 @@
 
 ## 🔗 JVM
 
-- [**线上JVM参数调优及选择合适垃圾收集器**](<https://github.com/RansongZ/github-test/blob/master/notes/%E7%BA%BF%E4%B8%8AJVM%E5%8F%82%E6%95%B0%E8%B0%83%E4%BC%98%E5%8F%8A%E9%80%89%E6%8B%A9%E5%90%88%E9%80%82%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8.md>)
+- [**最近服务准备上线，统一对微服务增加JVM参数**](https://mp.weixin.qq.com/s/H1GgsR-2AjRNsBHG1GRyGg)
 
   
 
