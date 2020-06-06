@@ -8,7 +8,7 @@
 
 一套开发级JAVA设计语言学习笔记。
 
-[![CircleCI status][circleci-image]][circleci-url] [![CI status][github-action-image]][github-action-url] [![codecov][codecov-image]][codecov-url] 
+[![CircleCI status][circleci-image]][circleci-url] [![CI status][github-action-image]][github-action-url] ![codecov][codecov-image]
 
 [![david deps][david-image]][david-url] [![FOSSA Status][fossa-image]][fossa-url] [![Issues need help][help-wanted-image]][help-wanted-url]
 
@@ -95,13 +95,13 @@
 
 转载文章请在开头明显处标明该页面地址，公众号等其它转载请联系 [121768729@qq.com](mailto:121768729@qq.com)。
 
-https://issuehunt.io/repos/34526884)
+
 
 ## 👥 社区互助
 
 如果您在使用的过程中碰到问题，可以通过下面几个途径寻求帮助，同时我们也鼓励资深用户通过下面的途径给新人提供帮助。
 
-1. [公众号<汀雨笔记>](http://stackoverflow.com/questions/tagged/antd)
+1. [公众号<汀雨笔记>](https://mp.weixin.qq.com/s/yqLDB1FoFQqaQPdMuEhw7w)
 2. [个人网站](http://ransongv587.com)
 3. [知乎](<https://www.zhihu.com/people/wo-shi-a-li-shu-shu>)
 
