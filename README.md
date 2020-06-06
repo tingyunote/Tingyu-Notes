@@ -54,7 +54,8 @@
 ## 🖥 环境
 
 - JDK1.8+
-- Maven、RocketMQ、Kafka、OAuth2、Spring security、JWT、Netty、TCP/IP
+- Maven、RocketMQ、Kafka、OAuth2、Spring security、JWT、Netty、TCP/IP/
+- ZK、Spring Cloud、dubbo、spring alibaba、MAT、arthas、Seata
 - .......
 
 ## 📦 鉴权-安全
