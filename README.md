@@ -59,7 +59,7 @@
 
 ## 📦 鉴权-安全
 
-- [**万文长字分析OAuth 2.0+JWT+spring security完成认证授权-生产级（附带源码**](https://github.com/CyC2018/CS-Notes/blob/master/notes/%E5%89%91%E6%8C%87%20Offer%20%E9%A2%98%E8%A7%A3%20-%20%E7%9B%AE%E5%BD%95.md)
+- [**万文长字分析OAuth 2.0+JWT+spring security完成认证授权-生产级（附带源码）**](https://mp.weixin.qq.com/s/uLM7XOcLoT08aIVfVjIrkg)
 
 ## 💻 操作系统
 
