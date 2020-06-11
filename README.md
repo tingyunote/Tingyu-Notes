@@ -77,11 +77,11 @@
 ## 🌍 多线程
 
 - [**我画了35张图就是为了让你深入 AQS**](https://mp.weixin.qq.com/s/2zDW1abkTUMKs6RuRyrPpw)
-- 深入理解线程池
+- [**万字图文浅析 ：ThreadPoolExecutor线程池**](https://mp.weixin.qq.com/s/2zDW1abkTUMKs6RuRyrPpw)
 
 ## 🔗 JVM
 
-- [**最近服务准备上线，统一对微服务增加JVM参数**](https://mp.weixin.qq.com/s/H1GgsR-2AjRNsBHG1GRyGg)
+- [**最近服务准备上线，统一对微服务增加JVM参数**](https://mp.weixin.qq.com/s/zYSzEXlnZKgu3bgkqr2sWA)
 
   
 
