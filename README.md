@@ -66,6 +66,7 @@
 
 - [**万文长字分析：想进大厂，你不得不掌握的CPU缓存基础**](https://mp.weixin.qq.com/s/yqLDB1FoFQqaQPdMuEhw7w)
 - [**必须掌握HTTP基础知识篇**](https://mp.weixin.qq.com/s/5kop9BEXwFng3d-rLJA4kw)
+- [**万字长文浅析：Epoll与Java Nio的那些事儿**](https://mp.weixin.qq.com/s/G6TfGbc4U8Zhv30wnN0HIg)
 
 ### 🌈 限流、降级、缓存
 
