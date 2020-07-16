@@ -84,7 +84,7 @@
 ## 🔗 JVM
 
 - [**最近服务准备上线，统一对微服务增加JVM参数**](https://mp.weixin.qq.com/s/H1GgsR-2AjRNsBHG1GRyGg)
-## 🤝 吐血推荐的leecode题解（实时更新）
+## 🤝 吐血推荐的leecode题解，以去除一些较难的题目（实时更新）
 
 - [**leecode题解超详细,每题都有单元测试哦**](http://note.youdao.com/noteshare?id=f87269e8ba3f63734e0c157a4cc53c08&sub=53FC027EF8934B35B5DBC78342372349)
   
