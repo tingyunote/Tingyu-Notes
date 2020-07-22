@@ -62,6 +62,10 @@
 
 - [**万文长字分析OAuth 2.0+JWT+spring security完成认证授权-生产级（附带源码）**](https://mp.weixin.qq.com/s/uLM7XOcLoT08aIVfVjIrkg)
 
+## ❤️ 心得篇 ~ 
+
+- [**我是怎么从三个月0~4000+的涨粉，共勉**](https://www.jianshu.com/p/1279fcc8288c)
+
 ## 💻 操作系统
 
 - [**万文长字分析：想进大厂，你不得不掌握的CPU缓存基础**](https://mp.weixin.qq.com/s/yqLDB1FoFQqaQPdMuEhw7w)
