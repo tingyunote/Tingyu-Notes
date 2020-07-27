@@ -95,7 +95,7 @@
 
 - [**大厂面经汇总 100 篇**](https://github.com/RansongZ/Tingyu-Notes/tree/master/%E5%A4%A7%E5%8E%82%E9%9D%A2%E7%BB%8F%E6%B1%87%E6%80%BB%20100%20%E7%AF%87)
   
-## 👥 JVM
+## 👥 基础杂谈-看起来简单
 
 - [**基础杂谈**](http://note.youdao.com/noteshare?id=36fd4eb716c3fe707a5deed5e4f960fd&sub=38B523E714794354BD57E43CB3AFD63B)
 
