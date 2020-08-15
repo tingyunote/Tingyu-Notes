@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.bifu.user.center.dao.NoteInfoMapper" >
+  <resultMap id="BaseResultMap" type="org.bifu.user.center.bean.po.NoteInfo" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="account" property="account" jdbcType="VARCHAR" />
+    <result column="note_type" property="noteType" jdbcType="VARCHAR" />
+    <result column="send_type" property="sendType" jdbcType="INTEGER" />
+    <result column="send_time" property="sendTime" jdbcType="TIMESTAMP" />
+    <result column="ip_address" property="ipAddress" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, account, note_type, send_type, send_time, ip_address
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from note_info
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from note_info
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.bifu.user.center.bean.po.NoteInfo" >
+    insert into note_info (id, account, note_type, 
+      send_type, send_time, ip_address
+      )
+    values (#{id,jdbcType=VARCHAR}, #{account,jdbcType=VARCHAR}, #{noteType,jdbcType=VARCHAR}, 
+      #{sendType,jdbcType=INTEGER}, #{sendTime,jdbcType=TIMESTAMP}, #{ipAddress,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="org.bifu.user.center.bean.po.NoteInfo" >
+    insert into note_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="account != null" >
+        account,
+      </if>
+      <if test="noteType != null" >
+        note_type,
+      </if>
+      <if test="sendType != null" >
+        send_type,
+      </if>
+      <if test="sendTime != null" >
+        send_time,
+      </if>
+      <if test="ipAddress != null" >
+        ip_address,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="account != null" >
+        #{account,jdbcType=VARCHAR},
+      </if>
+      <if test="noteType != null" >
+        #{noteType,jdbcType=VARCHAR},
+      </if>
+      <if test="sendType != null" >
+        #{sendType,jdbcType=INTEGER},
+      </if>
+      <if test="sendTime != null" >
+        #{sendTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ipAddress != null" >
+        #{ipAddress,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.bifu.user.center.bean.po.NoteInfo" >
+    update note_info
+    <set >
+      <if test="account != null" >
+        account = #{account,jdbcType=VARCHAR},
+      </if>
+      <if test="noteType != null" >
+        note_type = #{noteType,jdbcType=VARCHAR},
+      </if>
+      <if test="sendType != null" >
+        send_type = #{sendType,jdbcType=INTEGER},
+      </if>
+      <if test="sendTime != null" >
+        send_time = #{sendTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ipAddress != null" >
+        ip_address = #{ipAddress,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.bifu.user.center.bean.po.NoteInfo" >
+    update note_info
+    set account = #{account,jdbcType=VARCHAR},
+      note_type = #{noteType,jdbcType=VARCHAR},
+      send_type = #{sendType,jdbcType=INTEGER},
+      send_time = #{sendTime,jdbcType=TIMESTAMP},
+      ip_address = #{ipAddress,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  
+  <!--  -->
+    <select id="selectSendTime" resultType="Integer" parameterType="map" >
+    select 
+    count(1)
+    from note_info
+    where 
+    account = #{account,jdbcType=VARCHAR}
+    and send_time &gt;  #{sendTime,jdbcType=TIMESTAMP}
+      <if test="noteType != null" >
+        and note_type = #{noteType,jdbcType=VARCHAR}
+      </if>
+  </select>
+</mapper>

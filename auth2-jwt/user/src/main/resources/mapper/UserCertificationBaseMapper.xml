@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.bifu.user.center.dao.UserCertificationBaseMapper">
+	<resultMap id="BaseResultMap"
+		type="org.bifu.user.center.bean.po.UserCertificationBase">
+		<id column="id" property="id" jdbcType="VARCHAR" />
+		<result column="member_id" property="memberId" jdbcType="VARCHAR" />
+		<result column="user_id" property="userId" jdbcType="VARCHAR" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="idcard" property="idcard" jdbcType="VARCHAR" />
+		<result column="ordinary_time" property="ordinaryTime"
+			jdbcType="TIMESTAMP" />
+		<result column="idcard_pic_front" property="idcardPicFront"
+			jdbcType="VARCHAR" />
+		<result column="idcard_pic_back" property="idcardPicBack"
+			jdbcType="VARCHAR" />
+		<result column="idcard_pic_onhand" property="idcardPicOnhand"
+			jdbcType="VARCHAR" />
+		<result column="senior_type" property="seniorType" jdbcType="INTEGER" />
+		<result column="senior_time" property="seniorTime" jdbcType="TIMESTAMP" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, member_id, user_id, name, idcard, ordinary_time,
+		idcard_pic_front,
+		idcard_pic_back,
+		idcard_pic_onhand,
+		senior_type,senior_time
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.String">
+		select
+		<include refid="Base_Column_List" />
+		from user_certification_base
+		where id = #{id,jdbcType=VARCHAR}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+		delete from
+		user_certification_base
+		where id = #{id,jdbcType=VARCHAR}
+	</delete>
+	<insert id="insert" parameterType="org.bifu.user.center.bean.po.UserCertificationBase">
+		insert into
+		user_certification_base (id, member_id, user_id,
+		name, idcard,
+		ordinary_time,
+		idcard_pic_front, idcard_pic_back, idcard_pic_onhand,
+		senior_type,senior_time)
+		values (#{id,jdbcType=VARCHAR},
+		#{memberId,jdbcType=VARCHAR},
+		#{userId,jdbcType=VARCHAR},
+		#{name,jdbcType=VARCHAR}, #{idcard,jdbcType=VARCHAR},
+		#{ordinaryTime,jdbcType=TIMESTAMP},
+		#{idcardPicFront,jdbcType=VARCHAR}, #{idcardPicBack,jdbcType=VARCHAR},
+		#{idcardPicOnhand,jdbcType=VARCHAR},#{seniorType,jdbcType=INTEGER},
+		#{seniorTime,jdbcType=TIMESTAMP})
+	</insert>
+	<insert id="insertSelective" parameterType="org.bifu.user.center.bean.po.UserCertificationBase">
+		insert into user_certification_base
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="memberId != null">
+				member_id,
+			</if>
+			<if test="userId != null">
+				user_id,
+			</if>
+			<if test="name != null">
+				name,
+			</if>
+			<if test="idcard != null">
+				idcard,
+			</if>
+			<if test="ordinaryTime != null">
+				ordinary_time,
+			</if>
+			<if test="idcardPicFront != null">
+				idcard_pic_front,
+			</if>
+			<if test="idcardPicBack != null">
+				idcard_pic_back,
+			</if>
+			<if test="idcardPicOnhand != null">
+				idcard_pic_onhand,
+			</if>
+			<if test="seniorType != null">
+				senior_type,
+			</if>
+			<if test="seniorTime != null">
+				senior_time,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=VARCHAR},
+			</if>
+			<if test="memberId != null">
+				#{memberId,jdbcType=VARCHAR},
+			</if>
+			<if test="userId != null">
+				#{userId,jdbcType=VARCHAR},
+			</if>
+			<if test="name != null">
+				#{name,jdbcType=VARCHAR},
+			</if>
+			<if test="idcard != null">
+				#{idcard,jdbcType=VARCHAR},
+			</if>
+			<if test="ordinaryTime != null">
+				#{ordinaryTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="idcardPicFront != null">
+				#{idcardPicFront,jdbcType=VARCHAR},
+			</if>
+			<if test="idcardPicBack != null">
+				#{idcardPicBack,jdbcType=VARCHAR},
+			</if>
+			<if test="idcardPicOnhand != null">
+				#{idcardPicOnhand,jdbcType=VARCHAR},
+			</if>
+			<if test="seniorType != null">
+				#{seniorType,jdbcType=INTEGER},
+			</if>
+			<if test="seniorTime != null">
+				#{seniorTime,jdbcType=TIMESTAMP},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective" parameterType="org.bifu.user.center.bean.po.UserCertificationBase">
+		update user_certification_base
+		<set>
+			<if test="memberId != null">
+				member_id = #{memberId,jdbcType=VARCHAR},
+			</if>
+			<if test="userId != null">
+				user_id = #{userId,jdbcType=VARCHAR},
+			</if>
+			<if test="name != null">
+				name = #{name,jdbcType=VARCHAR},
+			</if>
+			<if test="idcard != null">
+				idcard = #{idcard,jdbcType=VARCHAR},
+			</if>
+			<if test="ordinaryTime != null">
+				ordinary_time = #{ordinaryTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="idcardPicFront != null">
+				idcard_pic_front = #{idcardPicFront,jdbcType=VARCHAR},
+			</if>
+			<if test="idcardPicBack != null">
+				idcard_pic_back = #{idcardPicBack,jdbcType=VARCHAR},
+			</if>
+			<if test="idcardPicOnhand != null">
+				idcard_pic_onhand = #{idcardPicOnhand,jdbcType=VARCHAR},
+			</if>
+			<if test="seniorType != null">
+				senior_type = #{seniorType,jdbcType=INTEGER},
+			</if>
+			<if test="seniorTime != null">
+				senior_time = #{seniorTime,jdbcType=TIMESTAMP},
+			</if>
+		</set>
+		where id = #{id,jdbcType=VARCHAR}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="org.bifu.user.center.bean.po.UserCertificationBase">
+		update
+		user_certification_base
+		set member_id = #{memberId,jdbcType=VARCHAR},
+		user_id = #{userId,jdbcType=VARCHAR},
+		name = #{name,jdbcType=VARCHAR},
+		idcard = #{idcard,jdbcType=VARCHAR},
+		ordinary_time =
+		#{ordinaryTime,jdbcType=TIMESTAMP},
+		idcard_pic_front =
+		#{idcardPicFront,jdbcType=VARCHAR},
+		idcard_pic_back =
+		#{idcardPicBack,jdbcType=VARCHAR},
+		idcard_pic_onhand =
+		#{idcardPicOnhand,jdbcType=VARCHAR},
+		senior_type =
+		#{seniorType,jdbcType=INTEGER}
+		senior_time =
+		#{seniorTime,jdbcType=TIMESTAMP}
+		where id = #{id,jdbcType=VARCHAR}
+	</update>
+
+	<!-- -->
+	<select id="selectByMap" resultMap="BaseResultMap"
+		parameterType="map">
+		select
+		<include refid="Base_Column_List" />
+		from user_certification_base
+		where 1 = 1
+		<if test="memberId != null">
+			and member_id = #{memberId,jdbcType=VARCHAR}
+		</if>
+		<if test="userId != null">
+			and user_id = #{userId,jdbcType=VARCHAR}
+		</if>
+		<if test="idcard != null">
+			and idcard = #{idcard,jdbcType=VARCHAR}
+		</if>
+	</select>
+
+	<update id="updateByUserIdSelective" parameterType="org.bifu.user.center.bean.po.UserCertificationBase">
+		update user_certification_base
+		<set>
+			<if test="memberId != null">
+				member_id = #{memberId,jdbcType=VARCHAR},
+			</if>
+			<if test="userId != null">
+				user_id = #{userId,jdbcType=VARCHAR},
+			</if>
+			<if test="name != null">
+				name = #{name,jdbcType=VARCHAR},
+			</if>
+			<if test="idcard != null">
+				idcard = #{idcard,jdbcType=VARCHAR},
+			</if>
+			<if test="ordinaryTime != null">
+				ordinary_time = #{ordinaryTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="idcardPicFront != null">
+				idcard_pic_front = #{idcardPicFront,jdbcType=VARCHAR},
+			</if>
+			<if test="idcardPicBack != null">
+				idcard_pic_back = #{idcardPicBack,jdbcType=VARCHAR},
+			</if>
+			<if test="idcardPicOnhand != null">
+				idcard_pic_onhand = #{idcardPicOnhand,jdbcType=VARCHAR},
+			</if>
+			<if test="seniorType != null">
+				senior_type = #{seniorType,jdbcType=INTEGER},
+			</if>
+			<if test="seniorTime != null">
+				senior_time = #{seniorTime,jdbcType=TIMESTAMP},
+			</if>
+		</set>
+		where user_id = #{userId,jdbcType=VARCHAR}
+	</update>	
+
+</mapper>

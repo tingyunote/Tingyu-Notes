@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.bifu.user.center.dao.UserMainMapper">
+	<resultMap id="BaseResultMap" type="org.bifu.user.center.bean.po.UserMain">
+		<id column="id" property="id" jdbcType="VARCHAR" />
+		<result column="member_id" property="memberId" jdbcType="VARCHAR" />
+		<result column="parent_id" property="parentId" jdbcType="VARCHAR" />
+		<result column="phone" property="phone" jdbcType="VARCHAR" />
+		<result column="email" property="email" jdbcType="VARCHAR" />
+		<result column="password" property="password" jdbcType="VARCHAR" />
+		<result column="trade_password" property="tradePassword"
+			jdbcType="VARCHAR" />
+		<result column="nick_name" property="nickName" jdbcType="VARCHAR" />
+		<result column="nick_image" property="nickImage" jdbcType="VARCHAR" />
+		<result column="ordinary_certification" property="ordinaryCertification"
+			jdbcType="INTEGER" />
+		<result column="senior_certification" property="seniorCertification"
+			jdbcType="INTEGER" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="reg_type" property="regType" jdbcType="INTEGER" />
+		<result column="ip" property="ip" jdbcType="VARCHAR" />
+		<result column="disable" property="disable" jdbcType="INTEGER" />
+		<result column="password_status" property="passwordStatus"
+			jdbcType="INTEGER" />
+		<result column="password_strategy" property="passwordStrategy"
+			jdbcType="INTEGER" />
+		<result column="login_type" property="loginType" jdbcType="INTEGER" />
+		<result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+		<result column="serial_number" property="serialNumber" jdbcType="VARCHAR" />
+		<result column="account_type" property="accountType" jdbcType="INTEGER" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, member_id, parent_id, phone, email, password,
+		trade_password,
+		nick_name, nick_image,
+		ordinary_certification,
+		senior_certification, create_time, reg_type, ip, disable,
+		password_status, password_strategy, login_type, update_time, serial_number, account_type
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.String">
+		select
+		<include refid="Base_Column_List" />
+		from user_main
+		where id = #{id,jdbcType=VARCHAR}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+		delete from
+		user_main
+		where id = #{id,jdbcType=VARCHAR}
+	</delete>
+	<insert id="insert" parameterType="org.bifu.user.center.bean.po.UserMain">
+		insert into user_main (id,
+		member_id, parent_id,
+		phone, email, password,
+		trade_password, nick_name,
+		nick_image,
+		ordinary_certification, senior_certification,
+		create_time,
+		reg_type, ip,
+		disable, password_status, password_strategy,
+		login_type,
+		update_time)
+		values (#{id,jdbcType=VARCHAR},
+		#{memberId,jdbcType=VARCHAR},
+		#{parentId,jdbcType=VARCHAR},
+		#{phone,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR},
+		#{password,jdbcType=VARCHAR},
+		#{tradePassword,jdbcType=VARCHAR},
+		#{nickName,jdbcType=VARCHAR},
+		#{nickImage,jdbcType=VARCHAR},
+		#{ordinaryCertification,jdbcType=INTEGER},
+		#{seniorCertification,jdbcType=INTEGER},
+		#{createTime,jdbcType=TIMESTAMP}, #{regType,jdbcType=INTEGER},
+		#{ip,jdbcType=VARCHAR},
+		#{disable,jdbcType=INTEGER},
+		#{passwordStatus,jdbcType=INTEGER},
+		#{passwordStrategy,jdbcType=INTEGER},
+		#{loginType,jdbcType=INTEGER},
+		#{updateTime,jdbcType=TIMESTAMP})
+	</insert>
+	<insert id="insertSelective" parameterType="org.bifu.user.center.bean.po.UserMain">
+		insert into user_main
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="memberId != null">
+				member_id,
+			</if>
+			<if test="parentId != null">
+				parent_id,
+			</if>
+			<if test="phone != null">
+				phone,
+			</if>
+			<if test="email != null">
+				email,
+			</if>
+			<if test="password != null">
+				password,
+			</if>
+			<if test="tradePassword != null">
+				trade_password,
+			</if>
+			<if test="nickName != null">
+				nick_name,
+			</if>
+			<if test="nickImage != null">
+				nick_image,
+			</if>
+			<if test="ordinaryCertification != null">
+				ordinary_certification,
+			</if>
+			<if test="seniorCertification != null">
+				senior_certification,
+			</if>
+			<if test="createTime != null">
+				create_time,
+			</if>
+			<if test="regType != null">
+				reg_type,
+			</if>
+			<if test="ip != null">
+				ip,
+			</if>
+			<if test="disable != null">
+				disable,
+			</if>
+			<if test="passwordStatus != null">
+				password_status,
+			</if>
+			<if test="passwordStrategy != null">
+				password_strategy,
+			</if>
+			<if test="loginType != null">
+				login_type,
+			</if>
+			<if test="updateTime != null">
+				update_time,
+			</if>
+			<if test="accountType != null">
+				account_type,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=VARCHAR},
+			</if>
+			<if test="memberId != null">
+				#{memberId,jdbcType=VARCHAR},
+			</if>
+			<if test="parentId != null">
+				#{parentId,jdbcType=VARCHAR},
+			</if>
+			<if test="phone != null">
+				#{phone,jdbcType=VARCHAR},
+			</if>
+			<if test="email != null">
+				#{email,jdbcType=VARCHAR},
+			</if>
+			<if test="password != null">
+				#{password,jdbcType=VARCHAR},
+			</if>
+			<if test="tradePassword != null">
+				#{tradePassword,jdbcType=VARCHAR},
+			</if>
+			<if test="nickName != null">
+				#{nickName,jdbcType=VARCHAR},
+			</if>
+			<if test="nickImage != null">
+				#{nickImage,jdbcType=VARCHAR},
+			</if>
+			<if test="ordinaryCertification != null">
+				#{ordinaryCertification,jdbcType=INTEGER},
+			</if>
+			<if test="seniorCertification != null">
+				#{seniorCertification,jdbcType=INTEGER},
+			</if>
+			<if test="createTime != null">
+				#{createTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="regType != null">
+				#{regType,jdbcType=INTEGER},
+			</if>
+			<if test="ip != null">
+				#{ip,jdbcType=VARCHAR},
+			</if>
+			<if test="disable != null">
+				#{disable,jdbcType=INTEGER},
+			</if>
+			<if test="passwordStatus != null">
+				#{passwordStatus,jdbcType=INTEGER},
+			</if>
+			<if test="passwordStrategy != null">
+				#{passwordStrategy,jdbcType=INTEGER},
+			</if>
+			<if test="loginType != null">
+				#{loginType,jdbcType=INTEGER},
+			</if>
+			<if test="updateTime != null">
+				#{updateTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="accountType != null">
+				#{accountType,jdbcType=INTEGER},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective" parameterType="org.bifu.user.center.bean.po.UserMain">
+		update user_main
+		<set>
+			<if test="memberId != null">
+				member_id = #{memberId,jdbcType=VARCHAR},
+			</if>
+			<if test="parentId != null">
+				parent_id = #{parentId,jdbcType=VARCHAR},
+			</if>
+			<if test="phone != null">
+				phone = #{phone,jdbcType=VARCHAR},
+			</if>
+			<if test="email != null">
+				email = #{email,jdbcType=VARCHAR},
+			</if>
+			<if test="password != null">
+				password = #{password,jdbcType=VARCHAR},
+			</if>
+			<if test="tradePassword != null">
+				trade_password = #{tradePassword,jdbcType=VARCHAR},
+			</if>
+			<if test="nickName != null">
+				nick_name = #{nickName,jdbcType=VARCHAR},
+			</if>
+			<if test="nickImage != null">
+				nick_image = #{nickImage,jdbcType=VARCHAR},
+			</if>
+			<if test="ordinaryCertification != null">
+				ordinary_certification =
+				#{ordinaryCertification,jdbcType=INTEGER},
+			</if>
+			<if test="seniorCertification != null">
+				senior_certification =
+				#{seniorCertification,jdbcType=INTEGER},
+			</if>
+			<if test="createTime != null">
+				create_time = #{createTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="regType != null">
+				reg_type = #{regType,jdbcType=INTEGER},
+			</if>
+			<if test="ip != null">
+				ip = #{ip,jdbcType=VARCHAR},
+			</if>
+			<if test="disable != null">
+				disable = #{disable,jdbcType=INTEGER},
+			</if>
+			<if test="passwordStatus != null">
+				password_status = #{passwordStatus,jdbcType=INTEGER},
+			</if>
+			<if test="passwordStrategy != null">
+				password_strategy = #{passwordStrategy,jdbcType=INTEGER},
+			</if>
+			<if test="loginType != null">
+				login_type = #{loginType,jdbcType=INTEGER},
+			</if>
+			<if test="updateTime != null">
+				update_time = #{updateTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="accountType != null">
+				account_type = #{accountType,jdbcType=INTEGER},
+			</if>
+		</set>
+		where id = #{id,jdbcType=VARCHAR}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="org.bifu.user.center.bean.po.UserMain">
+		update user_main
+		set member_id = #{memberId,jdbcType=VARCHAR},
+		parent_id =
+		#{parentId,jdbcType=VARCHAR},
+		phone = #{phone,jdbcType=VARCHAR},
+		email =
+		#{email,jdbcType=VARCHAR},
+		password = #{password,jdbcType=VARCHAR},
+		trade_password = #{tradePassword,jdbcType=VARCHAR},
+		nick_name =
+		#{nickName,jdbcType=VARCHAR},
+		nick_image =
+		#{nickImage,jdbcType=VARCHAR},
+		ordinary_certification =
+		#{ordinaryCertification,jdbcType=INTEGER},
+		senior_certification =
+		#{seniorCertification,jdbcType=INTEGER},
+		create_time =
+		#{createTime,jdbcType=TIMESTAMP},
+		reg_type =
+		#{regType,jdbcType=INTEGER},
+		ip = #{ip,jdbcType=VARCHAR},
+		disable =
+		#{disable,jdbcType=INTEGER},
+		password_status =
+		#{passwordStatus,jdbcType=INTEGER},
+		password_strategy =
+		#{passwordStrategy,jdbcType=INTEGER},
+		login_type =
+		#{loginType,jdbcType=INTEGER},
+		update_time =
+		#{updateTime,jdbcType=TIMESTAMP}
+		where id = #{id,jdbcType=VARCHAR}
+	</update>
+
+    <!-- -->
+	<select id="selectExistMobile" resultMap="BaseResultMap"
+		parameterType="java.lang.String">
+		select
+		<include refid="Base_Column_List" />
+		from user_main
+		where
+		phone = #{mobileOrEmail,jdbcType=VARCHAR}
+		or
+		email =
+		#{mobileOrEmail,jdbcType=VARCHAR}
+	</select>
+
+	<select id="selectByMap" resultMap="BaseResultMap"
+		parameterType="map">
+		select
+		<include refid="Base_Column_List" />
+		from user_main
+		where 1 = 1
+		<if test="userId != null">
+			and id = #{userId,jdbcType=VARCHAR}
+		</if>
+		<if test="memberId != null">
+			and member_id = #{memberId,jdbcType=VARCHAR}
+		</if>
+	</select>
+
+	<select id="selectListByMap" resultMap="BaseResultMap"
+		parameterType="map">
+		select
+		<include refid="Base_Column_List" />
+		from user_main
+		where 1 = 1
+		<if test="memberId != null and '' != memberId">
+			and member_id = #{memberId,jdbcType=VARCHAR}
+		</if>
+		<if test="account != null and '' != account">
+			and (phone = #{account,jdbcType=VARCHAR} or email =
+			#{account,jdbcType=VARCHAR})
+		</if>
+		<if test="disable != null and '' != disable">
+			and disable = #{disable,jdbcType=INTEGER}
+		</if>
+		<if test="regTimeStart != null and regTimeStart != ''">
+			and create_time &gt;= #{regTimeStart,jdbcType=TIMESTAMP}
+		</if>
+		<if test="regTimeEnd != null and regTimeEnd != ''">
+			and create_time &lt;= #{regTimeEnd,jdbcType=TIMESTAMP}
+		</if>
+		ORDER BY create_time DESC
+	</select>
+
+	<select id="selectCenterUserMainsSelective" resultMap="BaseResultMap"
+		parameterType="map">
+		SELECT
+		<include refid="Base_Column_List" />
+		from user_main
+		where
+		id in
+		<foreach item="item" index="index" collection="userIds" open="("
+			separator="," close=")">
+			#{item}
+		</foreach>
+	</select>
+
+	<select id="selectCountByMap" resultType="java.lang.Integer" parameterType="map">
+		select
+		count(1)
+		from user_main
+		ORDER BY create_time DESC
+	</select>
+
+	<update id="bindSerialNumber">
+		update user_main
+		set serial_number = #{serialNumber,jdbcType=VARCHAR},
+		update_time = now()
+		where id = #{userId,jdbcType=VARCHAR}
+	</update>
+
+</mapper>

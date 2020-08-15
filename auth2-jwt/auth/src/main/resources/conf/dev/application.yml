@@ -1,0 +1,72 @@
+server:
+  port: 8082
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://xxx:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+
+spring:
+  application:
+    name: bifu-auth
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://4xxx:3306/auth?useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+    initialSize: 5
+    minIdle: 1
+    maxActive: 20
+    maxWait: 60000
+    minEvictableIdleTimeMillis: 300000
+    timeBetweenEvictionRunsMillis: 60000
+    validationQuery: SELECT 1 FROM DUAL
+    testOnBorrow: true
+    poolPreparedStatements: true
+    useGlobalDataSourceStat: true
+    maxOpenPreparedStatements: 20
+    maxPoolPreparedStatementPerConnectionSize: 20
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    filters: stat,wall
+  jackson:
+    default-property-inclusion: non_null
+  redis:
+    database0: 0
+    host: 121.40.248.56
+    port: 6379
+    password: R1lEiCPVUwV2OGKIJrFQar
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 5
+        min-idle: 0
+    timeout: 10000
+    
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    org:
+      bifu:
+        distributed:
+          auth:
+            dao: debug
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+
+prefix:
+  auth: http://xxx:8082/
+  usercenter: http://xx:9999/USERCENTER/
+
+#prefix:
+  #auth: http://192.168.31.28:8082/
+  #usercenter: http://192.168.31.28:8098/
+
+oauth:
+    redirectUrl: /token
+    tokenUrl: /token

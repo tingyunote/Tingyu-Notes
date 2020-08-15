@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.bifu.user.center.dao.UserLoginLogMapper">
+	<resultMap id="BaseResultMap" type="org.bifu.user.center.bean.po.UserLoginLog">
+		<id column="id" property="id" jdbcType="VARCHAR" />
+		<result column="type" property="type" jdbcType="INTEGER" />
+		<result column="ip" property="ip" jdbcType="VARCHAR" />
+		<result column="status" property="status" jdbcType="INTEGER" />
+		<result column="time" property="time" jdbcType="TIMESTAMP" />
+		<result column="user_id" property="userId" jdbcType="VARCHAR" />
+		<result column="member_id" property="memberId" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, type, ip, status, time, user_id, member_id
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.String">
+		select
+		<include refid="Base_Column_List" />
+		from user_login_log
+		where id = #{id,jdbcType=VARCHAR}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+		delete from
+		user_login_log
+		where id = #{id,jdbcType=VARCHAR}
+	</delete>
+	<insert id="insert" parameterType="org.bifu.user.center.bean.po.UserLoginLog">
+		insert into user_login_log
+		(id, type, ip,
+		status, time, user_id,
+		member_id)
+		values
+		(#{id,jdbcType=VARCHAR}, #{type,jdbcType=INTEGER},
+		#{ip,jdbcType=VARCHAR},
+		#{status,jdbcType=INTEGER},
+		#{time,jdbcType=TIMESTAMP}, #{userId,jdbcType=VARCHAR},
+		#{memberId,jdbcType=VARCHAR})
+	</insert>
+	<insert id="insertSelective" parameterType="org.bifu.user.center.bean.po.UserLoginLog">
+		insert into user_login_log
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="type != null">
+				type,
+			</if>
+			<if test="ip != null">
+				ip,
+			</if>
+			<if test="status != null">
+				status,
+			</if>
+			<if test="time != null">
+				time,
+			</if>
+			<if test="userId != null">
+				user_id,
+			</if>
+			<if test="memberId != null">
+				member_id,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=VARCHAR},
+			</if>
+			<if test="type != null">
+				#{type,jdbcType=INTEGER},
+			</if>
+			<if test="ip != null">
+				#{ip,jdbcType=VARCHAR},
+			</if>
+			<if test="status != null">
+				#{status,jdbcType=INTEGER},
+			</if>
+			<if test="time != null">
+				#{time,jdbcType=TIMESTAMP},
+			</if>
+			<if test="userId != null">
+				#{userId,jdbcType=VARCHAR},
+			</if>
+			<if test="memberId != null">
+				#{memberId,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective" parameterType="org.bifu.user.center.bean.po.UserLoginLog">
+		update user_login_log
+		<set>
+			<if test="type != null">
+				type = #{type,jdbcType=INTEGER},
+			</if>
+			<if test="ip != null">
+				ip = #{ip,jdbcType=VARCHAR},
+			</if>
+			<if test="status != null">
+				status = #{status,jdbcType=INTEGER},
+			</if>
+			<if test="time != null">
+				time = #{time,jdbcType=TIMESTAMP},
+			</if>
+			<if test="userId != null">
+				user_id = #{userId,jdbcType=VARCHAR},
+			</if>
+			<if test="memberId != null">
+				member_id = #{memberId,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where id = #{id,jdbcType=VARCHAR}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="org.bifu.user.center.bean.po.UserLoginLog">
+		update
+		user_login_log
+		set type = #{type,jdbcType=INTEGER},
+		ip =
+		#{ip,jdbcType=VARCHAR},
+		status = #{status,jdbcType=INTEGER},
+		time =
+		#{time,jdbcType=TIMESTAMP},
+		user_id = #{userId,jdbcType=VARCHAR},
+		member_id = #{memberId,jdbcType=VARCHAR}
+		where id =
+		#{id,jdbcType=VARCHAR}
+	</update>
+
+	<!-- -->
+	<select id="selectListByMap" resultMap="BaseResultMap"
+		parameterType="map">
+		select
+		<include refid="Base_Column_List" />
+		from user_login_log
+		where 1 = 1
+		<if test="userId != null">
+			and user_id = #{userId,jdbcType=VARCHAR}
+		</if>
+		<if test="memberId != null">
+			and member_id = #{memberId,jdbcType=VARCHAR}
+		</if>
+		order by time desc
+	</select>
+
+</mapper>

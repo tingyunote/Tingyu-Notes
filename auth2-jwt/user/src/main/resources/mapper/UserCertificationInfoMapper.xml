@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.bifu.user.center.dao.UserCertificationInfoMapper">
+	<resultMap id="BaseResultMap"
+		type="org.bifu.user.center.bean.po.UserCertificationInfo">
+		<id column="id" property="id" jdbcType="VARCHAR" />
+		<result column="member_id" property="memberId" jdbcType="VARCHAR" />
+		<result column="user_id" property="userId" jdbcType="VARCHAR" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="idcard" property="idcard" jdbcType="VARCHAR" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="idcard_pic_front" property="idcardPicFront"
+			jdbcType="VARCHAR" />
+		<result column="idcard_pic_back" property="idcardPicBack"
+			jdbcType="VARCHAR" />
+		<result column="idcard_pic_onhand" property="idcardPicOnhand"
+			jdbcType="VARCHAR" />
+		<result column="cer_status" property="cerStatus" jdbcType="INTEGER" />
+		<result column="cer_time" property="cerTime" jdbcType="TIMESTAMP" />
+		<result column="content" property="content" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, member_id, user_id, name, idcard, create_time,
+		idcard_pic_front,
+		idcard_pic_back,
+		idcard_pic_onhand, cer_status,
+		cer_time, content
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.String">
+		select
+		<include refid="Base_Column_List" />
+		from user_certification_info
+		where id = #{id,jdbcType=VARCHAR}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+		delete from
+		user_certification_info
+		where id = #{id,jdbcType=VARCHAR}
+	</delete>
+	<insert id="insert" parameterType="org.bifu.user.center.bean.po.UserCertificationInfo">
+		insert into
+		user_certification_info (id, member_id, user_id,
+		name, idcard,
+		create_time,
+		idcard_pic_front, idcard_pic_back, idcard_pic_onhand,
+		cer_status, cer_time, content
+		)
+		values (#{id,jdbcType=VARCHAR},
+		#{memberId,jdbcType=VARCHAR},
+		#{userId,jdbcType=VARCHAR},
+		#{name,jdbcType=VARCHAR}, #{idcard,jdbcType=VARCHAR},
+		#{createTime,jdbcType=TIMESTAMP},
+		#{idcardPicFront,jdbcType=VARCHAR},
+		#{idcardPicBack,jdbcType=VARCHAR},
+		#{idcardPicOnhand,jdbcType=VARCHAR},
+		#{cerStatus,jdbcType=INTEGER},
+		#{cerTime,jdbcType=TIMESTAMP}, #{content,jdbcType=VARCHAR}
+		)
+	</insert>
+	<insert id="insertSelective" parameterType="org.bifu.user.center.bean.po.UserCertificationInfo">
+		insert into user_certification_info
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="memberId != null">
+				member_id,
+			</if>
+			<if test="userId != null">
+				user_id,
+			</if>
+			<if test="name != null">
+				name,
+			</if>
+			<if test="idcard != null">
+				idcard,
+			</if>
+			<if test="createTime != null">
+				create_time,
+			</if>
+			<if test="idcardPicFront != null">
+				idcard_pic_front,
+			</if>
+			<if test="idcardPicBack != null">
+				idcard_pic_back,
+			</if>
+			<if test="idcardPicOnhand != null">
+				idcard_pic_onhand,
+			</if>
+			<if test="cerStatus != null">
+				cer_status,
+			</if>
+			<if test="cerTime != null">
+				cer_time,
+			</if>
+			<if test="content != null">
+				content,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=VARCHAR},
+			</if>
+			<if test="memberId != null">
+				#{memberId,jdbcType=VARCHAR},
+			</if>
+			<if test="userId != null">
+				#{userId,jdbcType=VARCHAR},
+			</if>
+			<if test="name != null">
+				#{name,jdbcType=VARCHAR},
+			</if>
+			<if test="idcard != null">
+				#{idcard,jdbcType=VARCHAR},
+			</if>
+			<if test="createTime != null">
+				#{createTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="idcardPicFront != null">
+				#{idcardPicFront,jdbcType=VARCHAR},
+			</if>
+			<if test="idcardPicBack != null">
+				#{idcardPicBack,jdbcType=VARCHAR},
+			</if>
+			<if test="idcardPicOnhand != null">
+				#{idcardPicOnhand,jdbcType=VARCHAR},
+			</if>
+			<if test="cerStatus != null">
+				#{cerStatus,jdbcType=INTEGER},
+			</if>
+			<if test="cerTime != null">
+				#{cerTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="content != null">
+				#{content,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective" parameterType="org.bifu.user.center.bean.po.UserCertificationInfo">
+		update user_certification_info
+		<set>
+			<if test="memberId != null">
+				member_id = #{memberId,jdbcType=VARCHAR},
+			</if>
+			<if test="userId != null">
+				user_id = #{userId,jdbcType=VARCHAR},
+			</if>
+			<if test="name != null">
+				name = #{name,jdbcType=VARCHAR},
+			</if>
+			<if test="idcard != null">
+				idcard = #{idcard,jdbcType=VARCHAR},
+			</if>
+			<if test="createTime != null">
+				create_time = #{createTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="idcardPicFront != null">
+				idcard_pic_front = #{idcardPicFront,jdbcType=VARCHAR},
+			</if>
+			<if test="idcardPicBack != null">
+				idcard_pic_back = #{idcardPicBack,jdbcType=VARCHAR},
+			</if>
+			<if test="idcardPicOnhand != null">
+				idcard_pic_onhand = #{idcardPicOnhand,jdbcType=VARCHAR},
+			</if>
+			<if test="cerStatus != null">
+				cer_status = #{cerStatus,jdbcType=INTEGER},
+			</if>
+			<if test="cerTime != null">
+				cer_time = #{cerTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="content != null">
+				content = #{content,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where id = #{id,jdbcType=VARCHAR}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="org.bifu.user.center.bean.po.UserCertificationInfo">
+		update
+		user_certification_info
+		set member_id = #{memberId,jdbcType=VARCHAR},
+		user_id = #{userId,jdbcType=VARCHAR},
+		name = #{name,jdbcType=VARCHAR},
+		idcard = #{idcard,jdbcType=VARCHAR},
+		create_time =
+		#{createTime,jdbcType=TIMESTAMP},
+		idcard_pic_front =
+		#{idcardPicFront,jdbcType=VARCHAR},
+		idcard_pic_back =
+		#{idcardPicBack,jdbcType=VARCHAR},
+		idcard_pic_onhand =
+		#{idcardPicOnhand,jdbcType=VARCHAR},
+		cer_status =
+		#{cerStatus,jdbcType=INTEGER},
+		cer_time =
+		#{cerTime,jdbcType=TIMESTAMP},
+		content = #{content,jdbcType=VARCHAR}
+		where id = #{id,jdbcType=VARCHAR}
+	</update>
+
+	<!-- -->
+	<select id="selectObjectByMap" resultMap="BaseResultMap"
+		parameterType="map">
+		select
+		<include refid="Base_Column_List" />
+		from user_certification_info
+		where 1 = 1
+		<if test="memberId != null">
+			and member_id = #{memberId,jdbcType=VARCHAR}
+		</if>
+		<if test="userId != null">
+			and user_id = #{userId,jdbcType=VARCHAR}
+		</if>
+		<if test="name != null">
+			and name = #{name,jdbcType=VARCHAR}
+		</if>
+		<if test="idcard != null">
+			and idcard = #{idcard,jdbcType=VARCHAR}
+		</if>
+		<if test="cerStatus != null">
+			and cer_status = #{cerStatus,jdbcType=INTEGER}
+		</if>
+	</select>
+
+	<select id="selectCountByMap" resultType="java.lang.Integer"
+		parameterType="map">
+		select
+		count(1)
+		from user_certification_info
+		where 1 = 1
+		<if test="memberId != null">
+			and member_id = #{memberId,jdbcType=VARCHAR}
+		</if>
+		<if test="userId != null">
+			and user_id = #{userId,jdbcType=VARCHAR}
+		</if>
+		<if test="name != null">
+			and name = #{name,jdbcType=VARCHAR}
+		</if>
+		<if test="idcard != null">
+			and idcard = #{idcard,jdbcType=VARCHAR}
+		</if>
+		<if test="cerStatus != null">
+			and cer_status = #{cerStatus,jdbcType=INTEGER}
+		</if>
+	</select>
+
+	<select id="selectListByMap" resultMap="BaseResultMap"
+		parameterType="map">
+		select
+		<include refid="Base_Column_List" />
+		from user_certification_info
+		where 1 = 1
+		<if test="memberId != null and '' != memberId">
+			and member_id = #{memberId,jdbcType=VARCHAR}
+		</if>
+		<if test="userId != null and '' != userId">
+			and user_id = #{userId,jdbcType=VARCHAR}
+		</if>
+		<if test="name != null and '' != name">
+			and name = #{name,jdbcType=VARCHAR}
+		</if>
+		<if test="idcard != null and '' != idcard">
+			and idcard = #{idcard,jdbcType=VARCHAR}
+		</if>
+		<if test="cerStatus != null and '' != cerStatus">
+			and cer_status = #{cerStatus,jdbcType=INTEGER}
+		</if>
+		order by create_time desc
+	</select>
+
+	<!-- 最后一次被拒绝的信息 -->
+	<select id="selectLastRefuse" resultMap="BaseResultMap"
+		parameterType="map">
+		select
+		<include refid="Base_Column_List" />
+		from user_certification_info
+		where 1 = 1
+		<if test="userId != null">
+			and user_id = #{userId,jdbcType=VARCHAR}
+		</if>
+		<if test="cerStatus != null">
+			and cer_status = #{cerStatus,jdbcType=INTEGER}
+		</if>
+		order by create_time desc limit 1
+	</select>
+
+</mapper>
