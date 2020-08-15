@@ -62,7 +62,7 @@
 - [**leecode题解超详细,每题都有单元测试哦**](http://note.youdao.com/noteshare?id=f87269e8ba3f63734e0c157a4cc53c08&sub=53FC027EF8934B35B5DBC78342372349)
 ## 📦 鉴权-安全
 
-- [**万文长字分析OAuth 2.0+JWT+spring security完成认证授权-生产级（附带源码）**](https://mp.weixin.qq.com/s/uLM7XOcLoT08aIVfVjIrkg)
+- [**万文长字分析OAuth 2.0+JWT+spring security完成认证授权-生产级（附带源码在本仓库）**](https://mp.weixin.qq.com/s/uLM7XOcLoT08aIVfVjIrkg)
 
 ## ❤️ 心得篇 ~ 
 
