@@ -57,10 +57,16 @@
 - Maven、RocketMQ、Kafka、OAuth2、Spring security、JWT、Netty、TCP/IP/
 - ZK、Spring Cloud、dubbo、spring alibaba、MAT、arthas、Seata
 - .......
+## 🤝 吐血推荐的leecode题解，以去除一些较难的题目，还是有些hard（实时更新）脑瓜子嗡嗡的
 
+- [**leecode题解超详细,每题都有单元测试哦**](http://note.youdao.com/noteshare?id=f87269e8ba3f63734e0c157a4cc53c08&sub=53FC027EF8934B35B5DBC78342372349)
 ## 📦 鉴权-安全
 
-- [**万文长字分析OAuth 2.0+JWT+spring security完成认证授权-生产级（附带源码）**](https://mp.weixin.qq.com/s/uLM7XOcLoT08aIVfVjIrkg)
+- [**万文长字分析OAuth 2.0+JWT+spring security完成认证授权-生产级（附带源码在本仓库）**](https://mp.weixin.qq.com/s/uLM7XOcLoT08aIVfVjIrkg)
+
+## ❤️ 心得篇 ~ 
+
+- [**我是怎么从三个月0~4000+的涨粉，共勉**](https://www.jianshu.com/p/1279fcc8288c)
 
 ## 💻 操作系统
 
@@ -84,15 +90,14 @@
 ## 🔗 JVM
 
 - [**最近服务准备上线，统一对微服务增加JVM参数**](https://mp.weixin.qq.com/s/H1GgsR-2AjRNsBHG1GRyGg)
-## 🤝 吐血推荐的leecode题解，以去除一些较难的题目（实时更新）
-
-- [**leecode题解超详细,每题都有单元测试哦**](http://note.youdao.com/noteshare?id=f87269e8ba3f63734e0c157a4cc53c08&sub=53FC027EF8934B35B5DBC78342372349)
   
 ## 🛡 无敌面经：大厂面经汇总 100 篇
 
 - [**大厂面经汇总 100 篇**](https://github.com/RansongZ/Tingyu-Notes/tree/master/%E5%A4%A7%E5%8E%82%E9%9D%A2%E7%BB%8F%E6%B1%87%E6%80%BB%20100%20%E7%AF%87)
   
+## 👥 基础杂谈-看起来简单
 
+- [**基础杂谈**](http://note.youdao.com/noteshare?id=36fd4eb716c3fe707a5deed5e4f960fd&sub=38B523E714794354BD57E43CB3AFD63B)
 
 
 
