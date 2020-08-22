@@ -27,7 +27,7 @@ public class TestCountDownLatch {
         }
         begin.countDown();// 枪声响起
         // 等待任务执行
-//        end.await();
+        end.await();
         // 统计、
         int count  = 0 ;
         int max = 0;

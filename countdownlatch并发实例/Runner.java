@@ -31,7 +31,7 @@ public class Runner implements Callable<Integer> {
         System.out.println(Thread.currentThread().getName());
         Thread.sleep(score);
 //        TimeUnit.MICROSECONDS.sleep(score); // 运动员跑步的时间
-//        end.countDown();
+        end.countDown();
         return score;
     }
 }
