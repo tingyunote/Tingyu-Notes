@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="redisson.dao.EntrustMapper">
+	<resultMap id="BaseResultMap"
+		type="redisson.bean.po.Entrust">
+		<id column="id" jdbcType="VARCHAR" property="id" />
+		<result column="entrust_no" jdbcType="VARCHAR"
+			property="entrustNo" />
+		<result column="user_id" jdbcType="VARCHAR" property="userId" />
+		<result column="member_id" jdbcType="VARCHAR"
+			property="memberId" />
+		<result column="cycle" jdbcType="INTEGER" property="cycle" />
+		<result column="pawn_coin_id" jdbcType="VARCHAR"
+			property="pawnCoinId" />
+		<result column="pawn_coin_eunit" jdbcType="VARCHAR"
+			property="pawnCoinEunit" />
+		<result column="pawn_total_quantity" jdbcType="DECIMAL"
+			property="pawnTotalQuantity" />
+		<result column="pawn_trade_quantity" jdbcType="DECIMAL"
+			property="pawnTradeQuantity" />
+		<result column="pawn_rate" jdbcType="DECIMAL"
+			property="pawnRate" />
+		<result column="legal_coin_id" jdbcType="VARCHAR"
+			property="legalCoinId" />
+		<result column="legal_coin_eunit" jdbcType="VARCHAR"
+			property="legalCoinEunit" />
+		<result column="legal_total_quantity" jdbcType="DECIMAL"
+			property="legalTotalQuantity" />
+		<result column="legal_trade_quantity" jdbcType="DECIMAL"
+			property="legalTradeQuantity" />
+		<result column="legal_daily_rate" jdbcType="DECIMAL"
+			property="legalDailyRate" />
+		<result column="total_interest" jdbcType="DECIMAL"
+			property="totalInterest" />
+		<result column="type" jdbcType="INTEGER" property="type" />
+		<result column="status" jdbcType="INTEGER" property="status" />
+		<result column="create_time" jdbcType="TIMESTAMP"
+			property="createTime" />
+		<result column="update_time" jdbcType="TIMESTAMP"
+			property="updateTime" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id, entrust_no, user_id, member_id, cycle, pawn_coin_id,
+		pawn_coin_eunit,
+		pawn_total_quantity,
+		pawn_trade_quantity, pawn_rate,
+		legal_coin_id, legal_coin_eunit, legal_total_quantity,
+		legal_trade_quantity, legal_daily_rate, total_interest, type, status,
+		create_time,
+		update_time
+	</sql>
+
+	<select id="selectByPrimaryKey" parameterType="java.lang.String"
+		resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from entrust
+		where id = #{id,jdbcType=VARCHAR}
+	</select>
+
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+		delete from
+		entrust
+		where id = #{id,jdbcType=VARCHAR}
+	</delete>
+
+	<insert id="insert"
+		parameterType="redisson.bean.po.Entrust">
+		insert into entrust (id, entrust_no, user_id,
+		member_id,
+		cycle, pawn_coin_id,
+		pawn_coin_eunit, pawn_total_quantity,
+		pawn_trade_quantity,
+		pawn_rate, legal_coin_id, legal_coin_eunit,
+		legal_total_quantity, legal_trade_quantity,
+		legal_daily_rate,
+		total_interest, type,
+		status, create_time, update_time
+		)
+		values
+		(#{id,jdbcType=VARCHAR}, #{entrustNo,jdbcType=VARCHAR},
+		#{userId,jdbcType=VARCHAR},
+		#{memberId,jdbcType=VARCHAR},
+		#{cycle,jdbcType=INTEGER}, #{pawnCoinId,jdbcType=VARCHAR},
+		#{pawnCoinEunit,jdbcType=VARCHAR},
+		#{pawnTotalQuantity,jdbcType=DECIMAL},
+		#{pawnTradeQuantity,jdbcType=DECIMAL},
+		#{pawnRate,jdbcType=DECIMAL},
+		#{legalCoinId,jdbcType=VARCHAR}, #{legalCoinEunit,jdbcType=VARCHAR},
+		#{legalTotalQuantity,jdbcType=DECIMAL},
+		#{legalTradeQuantity,jdbcType=DECIMAL},
+		#{legalDailyRate,jdbcType=DECIMAL}, #{totalInterest,jdbcType=DECIMAL},
+		#{type,jdbcType=INTEGER},
+		#{status,jdbcType=INTEGER},
+		#{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
+		)
+	</insert>
+
+	<insert id="insertSelective"
+		parameterType="redisson.bean.po.Entrust">
+		insert into entrust
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="entrustNo != null">
+				entrust_no,
+			</if>
+			<if test="userId != null">
+				user_id,
+			</if>
+			<if test="memberId != null">
+				member_id,
+			</if>
+			<if test="cycle != null">
+				cycle,
+			</if>
+			<if test="pawnCoinId != null">
+				pawn_coin_id,
+			</if>
+			<if test="pawnCoinEunit != null">
+				pawn_coin_eunit,
+			</if>
+			<if test="pawnTotalQuantity != null">
+				pawn_total_quantity,
+			</if>
+			<if test="pawnTradeQuantity != null">
+				pawn_trade_quantity,
+			</if>
+			<if test="pawnRate != null">
+				pawn_rate,
+			</if>
+			<if test="legalCoinId != null">
+				legal_coin_id,
+			</if>
+			<if test="legalCoinEunit != null">
+				legal_coin_eunit,
+			</if>
+			<if test="legalTotalQuantity != null">
+				legal_total_quantity,
+			</if>
+			<if test="legalTradeQuantity != null">
+				legal_trade_quantity,
+			</if>
+			<if test="legalDailyRate != null">
+				legal_daily_rate,
+			</if>
+			<if test="totalInterest != null">
+				total_interest,
+			</if>
+			<if test="type != null">
+				type,
+			</if>
+			<if test="status != null">
+				status,
+			</if>
+			<if test="createTime != null">
+				create_time,
+			</if>
+			<if test="updateTime != null">
+				update_time,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=VARCHAR},
+			</if>
+			<if test="entrustNo != null">
+				#{entrustNo,jdbcType=VARCHAR},
+			</if>
+			<if test="userId != null">
+				#{userId,jdbcType=VARCHAR},
+			</if>
+			<if test="memberId != null">
+				#{memberId,jdbcType=VARCHAR},
+			</if>
+			<if test="cycle != null">
+				#{cycle,jdbcType=INTEGER},
+			</if>
+			<if test="pawnCoinId != null">
+				#{pawnCoinId,jdbcType=VARCHAR},
+			</if>
+			<if test="pawnCoinEunit != null">
+				#{pawnCoinEunit,jdbcType=VARCHAR},
+			</if>
+			<if test="pawnTotalQuantity != null">
+				#{pawnTotalQuantity,jdbcType=DECIMAL},
+			</if>
+			<if test="pawnTradeQuantity != null">
+				#{pawnTradeQuantity,jdbcType=DECIMAL},
+			</if>
+			<if test="pawnRate != null">
+				#{pawnRate,jdbcType=DECIMAL},
+			</if>
+			<if test="legalCoinId != null">
+				#{legalCoinId,jdbcType=VARCHAR},
+			</if>
+			<if test="legalCoinEunit != null">
+				#{legalCoinEunit,jdbcType=VARCHAR},
+			</if>
+			<if test="legalTotalQuantity != null">
+				#{legalTotalQuantity,jdbcType=DECIMAL},
+			</if>
+			<if test="legalTradeQuantity != null">
+				#{legalTradeQuantity,jdbcType=DECIMAL},
+			</if>
+			<if test="legalDailyRate != null">
+				#{legalDailyRate,jdbcType=DECIMAL},
+			</if>
+			<if test="totalInterest != null">
+				#{totalInterest,jdbcType=DECIMAL},
+			</if>
+			<if test="type != null">
+				#{type,jdbcType=INTEGER},
+			</if>
+			<if test="status != null">
+				#{status,jdbcType=INTEGER},
+			</if>
+			<if test="createTime != null">
+				#{createTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="updateTime != null">
+				#{updateTime,jdbcType=TIMESTAMP},
+			</if>
+		</trim>
+	</insert>
+
+	<update id="updateByPrimaryKeySelective"
+		parameterType="redisson.bean.po.Entrust">
+		update entrust
+		<set>
+			<if test="entrustNo != null">
+				entrust_no = #{entrustNo,jdbcType=VARCHAR},
+			</if>
+			<if test="userId != null">
+				user_id = #{userId,jdbcType=VARCHAR},
+			</if>
+			<if test="memberId != null">
+				member_id = #{memberId,jdbcType=VARCHAR},
+			</if>
+			<if test="cycle != null">
+				cycle = #{cycle,jdbcType=INTEGER},
+			</if>
+			<if test="pawnCoinId != null">
+				pawn_coin_id = #{pawnCoinId,jdbcType=VARCHAR},
+			</if>
+			<if test="pawnCoinEunit != null">
+				pawn_coin_eunit = #{pawnCoinEunit,jdbcType=VARCHAR},
+			</if>
+			<if test="pawnTotalQuantity != null">
+				pawn_total_quantity =
+				#{pawnTotalQuantity,jdbcType=DECIMAL},
+			</if>
+			<if test="pawnTradeQuantity != null">
+				pawn_trade_quantity =
+				#{pawnTradeQuantity,jdbcType=DECIMAL},
+			</if>
+			<if test="pawnRate != null">
+				pawn_rate = #{pawnRate,jdbcType=DECIMAL},
+			</if>
+			<if test="legalCoinId != null">
+				legal_coin_id = #{legalCoinId,jdbcType=VARCHAR},
+			</if>
+			<if test="legalCoinEunit != null">
+				legal_coin_eunit = #{legalCoinEunit,jdbcType=VARCHAR},
+			</if>
+			<if test="legalTotalQuantity != null">
+				legal_total_quantity =
+				#{legalTotalQuantity,jdbcType=DECIMAL},
+			</if>
+			<if test="legalTradeQuantity != null">
+				legal_trade_quantity =
+				#{legalTradeQuantity,jdbcType=DECIMAL},
+			</if>
+			<if test="legalDailyRate != null">
+				legal_daily_rate = #{legalDailyRate,jdbcType=DECIMAL},
+			</if>
+			<if test="totalInterest != null">
+				total_interest = #{totalInterest,jdbcType=DECIMAL},
+			</if>
+			<if test="type != null">
+				type = #{type,jdbcType=INTEGER},
+			</if>
+			<if test="status != null">
+				status = #{status,jdbcType=INTEGER},
+			</if>
+			<if test="createTime != null">
+				create_time = #{createTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="updateTime != null">
+				update_time = #{updateTime,jdbcType=TIMESTAMP},
+			</if>
+		</set>
+		where id = #{id,jdbcType=VARCHAR}
+	</update>
+
+	<update id="updateByPrimaryKey"
+		parameterType="redisson.bean.po.Entrust">
+		update entrust
+		set entrust_no =
+		#{entrustNo,jdbcType=VARCHAR},
+		user_id = #{userId,jdbcType=VARCHAR},
+		member_id = #{memberId,jdbcType=VARCHAR},
+		cycle =
+		#{cycle,jdbcType=INTEGER},
+		pawn_coin_id =
+		#{pawnCoinId,jdbcType=VARCHAR},
+		pawn_coin_eunit =
+		#{pawnCoinEunit,jdbcType=VARCHAR},
+		pawn_total_quantity =
+		#{pawnTotalQuantity,jdbcType=DECIMAL},
+		pawn_trade_quantity =
+		#{pawnTradeQuantity,jdbcType=DECIMAL},
+		pawn_rate =
+		#{pawnRate,jdbcType=DECIMAL},
+		legal_coin_id =
+		#{legalCoinId,jdbcType=VARCHAR},
+		legal_coin_eunit =
+		#{legalCoinEunit,jdbcType=VARCHAR},
+		legal_total_quantity =
+		#{legalTotalQuantity,jdbcType=DECIMAL},
+		legal_trade_quantity =
+		#{legalTradeQuantity,jdbcType=DECIMAL},
+		legal_daily_rate =
+		#{legalDailyRate,jdbcType=DECIMAL},
+		total_interest =
+		#{totalInterest,jdbcType=DECIMAL},
+		type = #{type,jdbcType=INTEGER},
+		status = #{status,jdbcType=INTEGER},
+		create_time =
+		#{createTime,jdbcType=TIMESTAMP},
+		update_time =
+		#{updateTime,jdbcType=TIMESTAMP}
+		where id = #{id,jdbcType=VARCHAR}
+	</update>
+
+</mapper>

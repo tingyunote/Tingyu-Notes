@@ -1,0 +1,86 @@
+server:
+  port: 8089
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+
+spring:
+  application:
+    name: bifu-aide
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://192.168.28.123:1001/bifu_interest_trade?useSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 7K6DWn6DmSfj6BrS
+    initialSize: 5
+    minIdle: 1
+    maxActive: 20
+    maxWait: 60000
+    minEvictableIdleTimeMillis: 300000
+    timeBetweenEvictionRunsMillis: 60000
+    validationQuery: SELECT 1 FROM DUAL
+    testOnBorrow: true
+    poolPreparedStatements: true
+    useGlobalDataSourceStat: true
+    maxOpenPreparedStatements: 20
+    maxPoolPreparedStatementPerConnectionSize: 20
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    filters: stat,wall
+  output:
+    ansi:
+      enabled: detect
+  jackson:
+    default-property-inclusion: non_null
+  task:
+    pool:
+      corePoolSize: 50
+      maxPoolSize: 100
+      keepAliveSeconds: 600
+      queueCapacity: 200
+  redis:
+    database0: 0
+    host: 192.168.28.123
+    port: 3001
+    password: 7PY3WfHh6F7Etf4M
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 5
+        min-idle: 0
+    timeout: 10000
+  servlet:
+    multipart:
+      max-file-size: 20Mb
+      max-request-size: 100Mb
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+
+pagehelper:
+  reasonable: true
+  supportMethodsArguments: true
+  pageSizeZero: true
+  params: count=countSql
+
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    org:
+      bibr:
+        distributed:
+          asset:
+            dao: debug
+
+rsa:
+  publicKey: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDn/QnUfkKkQpG++6YDUYo8qc0mrcRbRsmokp3EJZJrwIblldv6W2+yAIWkkel4GzsL+oklZReqZcG4F+ug3otc6IZa3fFMXuaDzoDzicdOABe2s8igLjMcfhujI9MqYvkVVSyFWdVOLNAnzQJgkisnHKZGPQZcxnQAHxTOUco+LwIDAQAB
+  privateKey: MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAOf9CdR+QqRCkb77pgNRijypzSatxFtGyaiSncQlkmvAhuWV2/pbb7IAhaSR6XgbOwv6iSVlF6plwbgX66Dei1zohlrd8Uxe5oPOgPOJx04AF7azyKAuMxx+G6Mj0ypi+RVVLIVZ1U4s0CfNAmCSKyccpkY9BlzGdAAfFM5Ryj4vAgMBAAECgYBPBc63Z1rkARkMaUQflUL1bxHGvyJHxVEj7u12xyWdNrO8uNN58HOXur3LVTimBQCUD/9vkYQCMy9Nujg1UBlAIokG9zdhNkK/5x2y1yVOAL+SDQolnumZyTYncWTnNOZtgCdCnqBmuHpw6LfF5nHm7/iCeThdUY2MJ+u9y9wAIQJBAPuCuokJ/lZY0GI5hzxkeK9TlNYn6+rJpkAehkNz4Aaa6tjXaGcrKsLgHrYXupYKLNXABhELY70nJaahltUgF3UCQQDsIRp6/poRIbLCZ4JyoXp4Mjvd8lJ03mBUdzYEsn3aH9jafqOxLHB3FseYz/fKl3Gb5xgbhsFUCQm+3I9slu6TAkBEaSCX2dIGZo33ybIRKTryZYecYKt453SDCEp42nHbGhQ6+wx403MEIrX3zaiA2y+qzFpaFIECmD1Tf6xpOBtpAkEAwi/XHx8ShNQ5tjZ5yNuTZBWrtjL6LLJUdiIzgllntmJKbCWJaMMrGkTZkIo3NZymCZha8wg3JWzpXtTz/lGBkQJAb3kjcBZHRg53s6/CLi5eVEGVW0RjXWo47SpwYUuu1b5miG9oXlmZxyG9nS8ZFWcBKh0IZMlhcGCqvq2qNoC6qw==
+
+time:
+  interval: 1800000

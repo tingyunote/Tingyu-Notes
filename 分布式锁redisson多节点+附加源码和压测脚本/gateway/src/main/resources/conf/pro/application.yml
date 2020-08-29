@@ -1,0 +1,47 @@
+server:
+  port: 9999
+    #ssl:
+    #key-store: classpath:client1.p12
+    #key-store-password: 123456
+    #keyStoreType: PKCS12
+  #keyAlias: client1
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://172.1600.41:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+
+spring:
+  application:
+    name: bifu-gateway
+  redis:
+    database0: 0
+    host: 172.16.34.39
+    port: 6379
+    password: R1lEiCPVUwV2OGKIJrFQar
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+  main:
+    allow-bean-definition-overriding: true
+  servlet:
+    multipart:
+      max-file-size: 20Mb
+      max-request-size: 100Mb
+
+ip:
+  internal: 0:0:0:0:0:0:0:1
+
+safe:
+  url:
+    assetsweb: /asset/account/hot/insert,/asset/account/hot/recharge,/asset/account/cold/insert,/asset/cnt/ok
+    auth: /reacquire
+
+route:
+  hold:
+    routenames: BIFU-USERCENTER
