@@ -19,6 +19,9 @@ public class TestCountDownLatch {
         CountDownLatch end = new CountDownLatch(800);
         ThreadFactory threadFactory = new NameTreadFactory();
         RejectedExecutionHandler handler = new MyIgnorePolicy();
+        // xecutors 返回的线程池对象的弊端如下：1） FixedThreadPool 和 SingleThreadPool：
+        //允许的请求队列长度为 Integer.MAX_VALUE，可能会堆积大量的请求，从而导致 OOM。2） CachedThreadPool：
+        //允许的创建线程数量为 Integer.MAX_VALUE，可能会创建大量的线程，从而导致 OOM。
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(100, 200
                 , 10, TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(2000), threadFactory,handler);
         List<Future<Integer>> list = new ArrayList<>(); // 记录跑步情况
