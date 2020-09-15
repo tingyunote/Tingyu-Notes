@@ -6,7 +6,8 @@
 
 <h1 align="center">A Wonderful learning-Java-Blog</h1>
 
-一套开发级JAVA设计语言学习笔记。所有笔记已更新于微信公众号<汀雨笔记> gitee:https://gitee.com/ran_song/Tingyu-Notes
+一套开发级JAVA设计语言学习笔记。所有笔记已更新于微信公众号<汀雨笔记> 
+❤️gitee:https://gitee.com/ran_song/Tingyu-Notes
 
 [![CircleCI status][circleci-image]][circleci-url] [![CI status][github-action-image]][github-action-url] ![codecov][codecov-image]
 
