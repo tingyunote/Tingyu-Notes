@@ -58,39 +58,39 @@
 - Maven、RocketMQ、Kafka、OAuth2、Spring security、JWT、Netty、TCP/IP/
 - ZK、Spring Cloud、dubbo、spring alibaba、MAT、arthas、Seata
 - .......
-## 🤝 吐血推荐的leecode题解，以去除一些较难的题目，还是有些hard（实时更新）脑瓜子嗡嗡的
+## 🤝 【原创】吐血推荐的leecode题解，以去除一些较难的题目，还是有些hard（实时更新）脑瓜子嗡嗡的
 
-- [**leecode题解超详细,每题都有单元测试哦**](http://note.youdao.com/noteshare?id=f87269e8ba3f63734e0c157a4cc53c08&sub=53FC027EF8934B35B5DBC78342372349)
+- 【原创】[**leecode题解超详细,每题都有单元测试哦**](http://note.youdao.com/noteshare?id=f87269e8ba3f63734e0c157a4cc53c08&sub=53FC027EF8934B35B5DBC78342372349)
 ## 📦 鉴权-安全
 
-- [**万文长字分析OAuth 2.0+JWT+spring security完成认证授权-生产级（附带源码在本仓库）**](https://mp.weixin.qq.com/s/uLM7XOcLoT08aIVfVjIrkg)
+- 【原创】[**万文长字分析OAuth 2.0+JWT+spring security完成认证授权-生产级（附带源码在本仓库）**](https://mp.weixin.qq.com/s/uLM7XOcLoT08aIVfVjIrkg)
 
 ## ❤️ 心得篇 ~ 
 
-- [**我是怎么从三个月0~4000+的涨粉，共勉**](https://www.jianshu.com/p/1279fcc8288c)
+- 【原创】[**我是怎么从三个月0~4000+的涨粉，共勉**](https://www.jianshu.com/p/1279fcc8288c)
 
 ## 💻 操作系统
 
-- [**万文长字分析：想进大厂，你不得不掌握的CPU缓存基础**](https://mp.weixin.qq.com/s/yqLDB1FoFQqaQPdMuEhw7w)
-- [**必须掌握HTTP基础知识篇**](https://mp.weixin.qq.com/s/5kop9BEXwFng3d-rLJA4kw)
-- [**万字长文浅析：Epoll与Java Nio的那些事儿**](https://mp.weixin.qq.com/s/G6TfGbc4U8Zhv30wnN0HIg)
+- 【原创】[**万文长字分析：想进大厂，你不得不掌握的CPU缓存基础**](https://mp.weixin.qq.com/s/yqLDB1FoFQqaQPdMuEhw7w)
+- 【原创】[**必须掌握HTTP基础知识篇**](https://mp.weixin.qq.com/s/5kop9BEXwFng3d-rLJA4kw)
+- 【原创】[**万字长文浅析：Epoll与Java Nio的那些事儿**](https://mp.weixin.qq.com/s/G6TfGbc4U8Zhv30wnN0HIg)
 
 ### 🌈 限流、降级、缓存
 
-- [**JAVA同一IP访问同一接口进行频率限制（分布式(京东抢购业务）及令牌桶实战使用场景**](https://mp.weixin.qq.com/s/pRNaiYlqrVAD8YzSN9_rSg)
+- 【原创】[**JAVA同一IP访问同一接口进行频率限制（分布式(京东抢购业务）及令牌桶实战使用场景**](https://mp.weixin.qq.com/s/pRNaiYlqrVAD8YzSN9_rSg)
 
 ### 🛡 消息中间件
 
-- [**rocketMQ零拷贝+kafka零拷贝+netty零拷贝分析**](<https://github.com/RansongZ/github-test/blob/master/notes/rocketMQ%E9%9B%B6%E6%8B%B7%E8%B4%9D%2Bkafka%E9%9B%B6%E6%8B%B7%E8%B4%9D%2Bnetty%E9%9B%B6%E6%8B%B7%E8%B4%9D%E5%88%86%E6%9E%90.md>)
+- 【原创】[**rocketMQ零拷贝+kafka零拷贝+netty零拷贝分析**](<https://github.com/RansongZ/github-test/blob/master/notes/rocketMQ%E9%9B%B6%E6%8B%B7%E8%B4%9D%2Bkafka%E9%9B%B6%E6%8B%B7%E8%B4%9D%2Bnetty%E9%9B%B6%E6%8B%B7%E8%B4%9D%E5%88%86%E6%9E%90.md>)
 
 ## 🌍 多线程
 
 - [**我画了35张图就是为了让你深入 AQS**](https://mp.weixin.qq.com/s/2zDW1abkTUMKs6RuRyrPpw)
-- [**万字图文浅析 ：ThreadPoolExecutor线程池**](https://mp.weixin.qq.com/s/zYSzEXlnZKgu3bgkqr2sWA)
+- 【原创】[**万字图文浅析 ：ThreadPoolExecutor线程池**](https://mp.weixin.qq.com/s/zYSzEXlnZKgu3bgkqr2sWA)
 
 ## 🔗 JVM
 
-- [**最近服务准备上线，统一对微服务增加JVM参数**](https://mp.weixin.qq.com/s/H1GgsR-2AjRNsBHG1GRyGg)
+- 【原创】[**最近服务准备上线，统一对微服务增加JVM参数**](https://mp.weixin.qq.com/s/H1GgsR-2AjRNsBHG1GRyGg)
   
 ## 🛡 无敌面经：大厂面经汇总 100 篇
 
@@ -98,7 +98,7 @@
   
 ## 👥 基础杂谈-看起来简单
 
-- [**基础杂谈**](http://note.youdao.com/noteshare?id=36fd4eb716c3fe707a5deed5e4f960fd&sub=38B523E714794354BD57E43CB3AFD63B)
+- 【原创】[**基础杂谈**](http://note.youdao.com/noteshare?id=36fd4eb716c3fe707a5deed5e4f960fd&sub=38B523E714794354BD57E43CB3AFD63B)
 
 
 
