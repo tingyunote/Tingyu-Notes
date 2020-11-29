@@ -61,6 +61,7 @@
 ## 🤝 【原创】吐血推荐的leecode题解，以去除一些较难的题目，还是有些hard（实时更新）脑瓜子嗡嗡的
 
 - 【原创】[**leecode题解超详细,每题都有单元测试哦**](http://note.youdao.com/noteshare?id=f87269e8ba3f63734e0c157a4cc53c08&sub=53FC027EF8934B35B5DBC78342372349)
+- 【原创】[**【今日leecode】两数相加**](https://mp.weixin.qq.com/s/SncxfFvTXmqicsEc4EUENg)
 ## 📦 鉴权-安全
 
 - 【原创】[**万文长字分析OAuth 2.0+JWT+spring security完成认证授权-生产级（附带源码在本仓库）**](https://mp.weixin.qq.com/s/uLM7XOcLoT08aIVfVjIrkg)
