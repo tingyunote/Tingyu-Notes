@@ -7,7 +7,7 @@
 <h1 align="center">A Wonderful learning-Java-Blog</h1>
 
 一套开发级JAVA设计语言学习笔记。所有笔记已更新于微信公众号<汀雨笔记> 
-❤️资源较多已同步到gitee:https://gitee.com/ran_song/Tingyu-Notes 2020-12-3
+❤️资源较多已同步到gitee:https://gitee.com/ran_song/Tingyu-Notes 2021-1-29
 
 [![CircleCI status][circleci-image]][circleci-url] [![CI status][github-action-image]][github-action-url] ![codecov][codecov-image]
 
@@ -65,6 +65,11 @@
 - 【原创】[**【今日leecode】无重复字符的最长子串**](https://mp.weixin.qq.com/s/9sj-KMtW6sAWLJ1jvYr2Hg)
 - 【原创】[**【今日最佳leecode】寻找两个正序数组的中位数-二分法-重要**](https://mp.weixin.qq.com/s/HVYzzb_P14OShrw6UPFOxA)
 - 【原创】[**我是怎么向5岁侄女解释动态规划的?**](https://juejin.cn/post/6909278635069276168) 
+- 【原创】[**【动态规划Day one - 最长回文子串】**](https://mp.weixin.qq.com/s?__biz=Mzg4ODMwNzY0MA==&mid=2247484289&idx=1&sn=5e8e8db61eefa9253706907a261c784d&chksm=cffc6956f88be040da92395db3287c97a508ee9994f85e4866fb1e12ddb37f73216dbb7423fb&token=2139155983&lang=zh_CN#rd) 
+- 【原创】[**【动态规划Day two - 正则表达式匹配】**](https://mp.weixin.qq.com/s?__biz=Mzg4ODMwNzY0MA==&mid=2247484295&idx=1&sn=bf0a50b54f74c010bd406f9dbfcfc23f&chksm=cffc6950f88be0463c82cd257119ff19626e12512c9bea2ed7c3782098bea6ec76d755f82bfb&token=2139155983&lang=zh_CN#rd) 
+- 【原创】[**【动态规划Day three - 最长有效括号】**](https://juejin.cn/post/6921967657352691725) 
+- 【原创】[**【动态规划Day four- 接雨水】**](https://mp.weixin.qq.com/s?__biz=Mzg4ODMwNzY0MA==&mid=2247484370&idx=1&sn=8ac0646f99b1021eb2ba77ee99bff2d5&chksm=cffc6905f88be013cf9f0f32db1f6d03f24f3e7d3236ae85b80821a7ba53acc373d05704262a&token=2139155983&lang=zh_CN#rd) 
+- 【原创】[**【动态规划Day Five- 通配符匹配】**](https://mp.weixin.qq.com/s?__biz=Mzg4ODMwNzY0MA==&mid=2247484377&idx=1&sn=b37c06eb329f7f7751dc4ad72c55fa08&chksm=cffc690ef88be018aaf727e2d6105a0a212313629e58107fa6f752254b5c0c8581e210050059&token=2139155983&lang=zh_CN#rd) 
 ## 📦 鉴权-安全
 
 - 【原创】[**万文长字分析OAuth 2.0+JWT+spring security完成认证授权-生产级（附带源码在本仓库）**](https://mp.weixin.qq.com/s/uLM7XOcLoT08aIVfVjIrkg)
