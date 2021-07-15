@@ -61,6 +61,7 @@
 ## 🤝 【原创】吐血推荐的leecode题解，以去除一些较难的题目，还是有些hard（实时更新）脑瓜子嗡嗡的
 
 - 【原创】[**leecode题解超详细,每题都有单元测试哦**](http://note.youdao.com/noteshare?id=f87269e8ba3f63734e0c157a4cc53c08&sub=53FC027EF8934B35B5DBC78342372349)
+- - 【原创】[**【❤️❤️❤️】肝了好多天-动态规划十连-超细腻解析｜刷题打卡**](https://mp.weixin.qq.com/s/akWb05thfBaTPX8f_m8YJg)
 - 【原创】[**【今日leecode】两数相加**](https://mp.weixin.qq.com/s/SncxfFvTXmqicsEc4EUENg)
 - 【原创】[**【今日leecode】无重复字符的最长子串**](https://mp.weixin.qq.com/s/9sj-KMtW6sAWLJ1jvYr2Hg)
 - 【原创】[**【今日最佳leecode】寻找两个正序数组的中位数-二分法-重要**](https://mp.weixin.qq.com/s/HVYzzb_P14OShrw6UPFOxA)
